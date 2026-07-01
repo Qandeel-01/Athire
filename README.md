@@ -1,8 +1,8 @@
-# Athire - Smart Fashion & Weather App
+# Athire - Smart Fashion based on Weather App
 
 Athire is an intelligent fashion recommendation application that combines weather data with outfit suggestions. Users can explore curated outfits, check UV levels, and make personalized fashion choices based on real-time weather conditions.
 
-## 🎯 Features
+##  Features
 
 - **Weather Dashboard**: Real-time weather information with UV gauge and detailed forecasts
 - **Outfit Builder**: Create and customize outfits for different occasions with drag-and-drop interface
@@ -33,7 +33,7 @@ Athire is an intelligent fashion recommendation application that combines weathe
 - **OpenWeather API** - Real-time weather data and forecasts
 - **OpenStreetMap Nominatim** - Geolocation services
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 Athire/
@@ -145,7 +145,7 @@ npm start         # Start Express server
 | **ActivityCard** | Activity-based outfit recommendations |
 | **Modal** | Reusable dialog component for user interactions |
 
-## 🔐 Security
+##  Security
 
 - API keys are stored in `.env` files (never committed to git)
 - Use `.env.example` as a template for required environment variables
@@ -158,7 +158,7 @@ The application is fully responsive and supports:
 - Tablets (768px - 1024px)
 - Mobile devices (320px - 767px)
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! To contribute:
 
@@ -168,17 +168,17 @@ Contributions are welcome! To contribute:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📄 License
+##  License
 
 This project is open source and available under the MIT License - see the LICENSE file for details.
 
-## 📧 Contact
+##  Contact
 
 For questions, feedback, or issues:
 - Open an issue on [GitHub Issues](https://github.com/Qandeel-01/Athire/issues)
 - Email: qandeelf.2003@gmail.com
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - OpenWeather API for weather data
 - OpenStreetMap for mapping services
