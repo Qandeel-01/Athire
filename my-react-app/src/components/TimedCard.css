@@ -1,0 +1,75 @@
+/* Glassmorphism Card Styles */
+.timed-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    transition: transform 0.3s ease, background 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .timed-card:hover {
+    transform: scale(1.05);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Hover Effect: Overlay */
+  .timed-card .card-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: opacity 0.3s ease;
+  }
+  
+  .timed-card:hover .card-overlay {
+    opacity: 1;
+  }
+  
+  /* Title and Description on Hover */
+  .card-overlay h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-overlay p {
+    font-size: 1rem;
+    color: #ddd;
+  }
+  
+  /* Static Title */
+  .timed-card h3 {
+    position: relative;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: medium;
+    margin: 1rem 0;
+    color: #fff;
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  /* Animation for Floating Cards */
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }

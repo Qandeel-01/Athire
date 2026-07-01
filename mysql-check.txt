@@ -1,0 +1,10 @@
+port_3306=True
+port_3006=False
+===SERVICES===
+
+Name     Status StartType
+----     ------ ---------
+MySQL80 Running Automatic
+
+
+

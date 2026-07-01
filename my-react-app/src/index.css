@@ -1,0 +1,189 @@
+/* Base Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("./components/assets/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Glassmorphism Styles */
+.glass {
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Float Animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Custom @media for MacBook (1440x900) */
+@media (width: auto) and (height: auto) {
+  .hero-section {
+    height: 900px;
+  }
+
+  .glass {
+    padding: 30px;
+  }
+
+  .hero-title {
+    font-size: 190px;
+  }
+
+  .hero-subtitle {
+    font-size: 22px;
+  }
+}
+
+/* Combined Zoom Animation for Smooth Transition */
+@keyframes seamlessZoomFade {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Subtitle Animation */
+@keyframes fadeSlideUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Add intro-specific styles */
+.intro-screen {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(25px);
+  z-index: 50;
+  position: fixed;
+}
+
+.intro-title {
+  animation: seamlessZoomFade 3.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.intro-subtitle {
+  animation: fadeSlideUp 1.5s cubic-bezier(0.4, 0, 0.2, 1) 0.5s forwards;
+}
+
+/* Video Background Styles */
+.video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 1;
+
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+/* Hero Section Base */
+.homepage, .hero-section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+/* Additional Styles */
+html {
+  height: 100%;
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (min-width: 1024px) {
+  .hero-section {
+    padding: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 120px;
+  }
+  
+  .hero-section {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-section {
+    width: 95%;
+  }
+}
+/* Add these styles for the map */
+.leaflet-container {
+  width: 100%;
+  height: 400px;
+  border-radius: 0.5rem;
+  z-index: 1;
+}
+
+.leaflet-control-container .leaflet-routing-container-hide {
+  display: none;
+}
+
+/* Optional: Custom marker popup styles */
+.leaflet-popup-content-wrapper {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.leaflet-popup-content {
+  margin: 8px 12px;
+  color: #333;
+  font-size: 14px;
+}

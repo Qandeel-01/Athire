@@ -1,0 +1,123 @@
+/* Main Container */
+
+
+.profile-container {
+  margin-top: 100px;
+  margin-bottom: 40px;
+  background: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
+  backdrop-filter: blur(15px); /* Glassmorphism blur effect */
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Profile Header */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.profile-photo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.7); /* Lighter translucent background */
+  border: 3px solid rgba(0, 0, 0, 0.3);
+}
+
+.user-name-container {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.user-name {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000; /* Black font color */
+  margin-bottom: 10px;
+}
+
+.user-info-container {
+  text-align: left;
+  padding-left: 20px;
+}
+.user-credentials {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333; /* Darker text for readability */
+}
+/* Saved Styles Section */
+.saved-styles-container {
+  width: 100%;
+}
+
+.saved-styles-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.saved-styles-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+.saved-style-item {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.saved-style-item:hover {
+  transform: scale(1.05);
+}
+
+.saved-style-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.saved-style-title {
+  padding: 10px;
+  font-size: 1rem;
+  text-align: center;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-container {
+    width: 95%;
+  }
+
+  .saved-style-item {
+    width: 150px;
+    height: 150px;
+  }
+}

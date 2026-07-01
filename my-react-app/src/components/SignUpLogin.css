@@ -1,0 +1,175 @@
+.signup-login-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(121, 119, 119, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.signup-login-modal {
+  background: rgba(66, 62, 60, 0.95);
+  padding: 2.5rem;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  animation: modalFade 0.3s ease-in-out;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 2rem auto;
+}
+
+@keyframes modalFade {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.close-button:hover {
+  opacity: 1;
+}
+
+.signup-login-modal h2 {
+  color: white;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.signup-login-modal input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.signup-login-modal input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.signup-login-modal input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  background: #726b62;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.submit-button:hover {
+  background: #7c766e;
+  transform: translateY(-2px);
+}
+
+.message {
+  color: white;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.toggle-form {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.toggle-button {
+  background: none;
+  border: none;
+  color: #726b62;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-left: 5px;
+  transition: color 0.3s ease;
+  padding: 0;
+}
+
+.toggle-button:hover {
+  color: #7c766e;
+}
+
+/* Custom scrollbar styles */
+.signup-login-overlay::-webkit-scrollbar {
+  width: 8px;
+}
+
+.signup-login-overlay::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.signup-login-overlay::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.signup-login-overlay::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-height: 800px) {
+  .signup-login-overlay {
+    align-items: flex-start;
+  }
+  
+  .signup-login-modal {
+    margin: 1rem auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .signup-login-modal {
+    padding: 2rem;
+  }
+  
+  .signup-login-modal h2 {
+    font-size: 1.5rem;
+  }
+}

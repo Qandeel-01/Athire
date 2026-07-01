@@ -1,0 +1,209 @@
+.before-login-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.3s ease-in-out;
+  margin: 0;
+  padding: 0;
+}
+
+.glassy-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  z-index: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.before-login-container[data-has-hover="true"] .glassy-overlay {
+  backdrop-filter: none;
+  background-color: transparent;
+}
+
+.text-container {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 35%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  transition: opacity 0.5s ease;
+}
+
+.text-container.hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.text-container h1 {
+  font-size: clamp(2.5rem, 10vw, 8rem);
+  color: white;
+  opacity: 0.9;
+  margin-bottom: 1rem;
+}
+
+.text-container p {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  color: #d1d5db;
+  letter-spacing: 0.05em;
+}
+
+.signup-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.signup-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.content-section {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 20px;
+  z-index: 2;
+  width: 50%;
+}
+
+.card-container {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+.card {
+  width: 180px;
+  height: 280px;
+  position: relative;
+  border-radius: 15px;
+  cursor: pointer;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.5;
+  transition: opacity 0.5s ease;
+  border-radius: 15px;
+}
+
+.card:hover img {
+  opacity: 1;
+}
+
+.card:not(:hover) {
+  width: 60px;
+}
+
+.card-title {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.description {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 40%;
+  z-index: 2;
+  transition: opacity 0.5s ease;
+}
+
+.description-title {
+  font-size: clamp(2.5rem, 10vw, 8rem);
+  margin-bottom: 1rem;
+  color: white;
+  opacity: 0.9;
+}
+
+.description-text {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  color: #d1d5db;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 1024px) {
+  .content-section {
+    width: 100%;
+    right: auto;
+    padding: 0 20px;
+  }
+
+  .card-container {
+    justify-content: center;
+  }
+  
+  .text-container, .description {
+    width: 80%;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card {
+    width: 80%;
+    max-width: 300px;
+    height: 200px;
+  }
+
+  .card:not(:hover) {
+    width: 80%;
+    height: 80px;
+  }
+  
+  .text-container h1, .description-title {
+    font-size: clamp(2rem, 8vw, 4rem);
+  }
+}
